@@ -1,26 +1,26 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Global } from '../../src/Global';
-import { OidcClient } from '../../src/OidcClient';
-import { SigninRequest } from '../../src/SigninRequest';
-import { SigninResponse } from '../../src/SigninResponse';
-import { ErrorResponse } from '../../src/ErrorResponse';
-import { SignoutRequest } from '../../src/SignoutRequest';
-import { SignoutResponse } from '../../src/SignoutResponse';
-import { State } from '../../src/State';
-import { SigninState } from '../../src/SigninState';
-import { OidcClientSettings } from '../../src/OidcClientSettings';
-import { MetadataService } from '../../src/MetadataService';
+import Global from '../../src/Global';
+import OidcClient from '../../src/OidcClient';
+import SigninRequest from '../../src/SigninRequest';
+import SigninResponse from '../../src/SigninResponse';
+import ErrorResponse from '../../src/ErrorResponse';
+import SignoutRequest from '../../src/SignoutRequest';
+import SignoutResponse from '../../src/SignoutResponse';
+import State from '../../src/State';
+import SigninState from '../../src/SigninState';
+import OidcClientSettings from '../../src/OidcClientSettings';
+import MetadataService from '../../src/MetadataService';
 
-import { Log } from '../../src/Log';
+import Log from '../../src/Log';
 
-import { StubMetadataService } from './StubMetadataService';
-import { StubStateStore } from './StubStateStore';
-import { StubResponseValidator } from './StubResponseValidator';
+import StubMetadataService from './StubMetadataService';
+import StubStateStore from './StubStateStore';
+import StubResponseValidator from './StubResponseValidator';
 
 import chai from 'chai';
-import { Z_NO_COMPRESSION } from 'zlib';
+//import { Z_NO_COMPRESSION } from 'zlib';
 chai.should();
 let assert = chai.assert;
 

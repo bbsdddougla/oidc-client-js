@@ -1,11 +1,11 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { State } from './State';
+import Log from './Log';
+import State from './State';
 import random from './random';
 
-export class SigninState extends State {
+export default class SigninState extends State {
     constructor({nonce, authority, client_id} = {}) {
         super(arguments[0]);
 

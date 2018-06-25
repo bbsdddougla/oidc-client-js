@@ -3,11 +3,11 @@
 
 import { jws, KEYUTIL as KeyUtil, X509, crypto, hextob64u, b64tohex } from '../jsrsasign/dist/jsrsasign.js';
 //import { jws, KEYUTIL as KeyUtil, X509, crypto, hextob64u, b64tohex } from 'jsrsasign';
-import { Log } from './Log';
+import Log from './Log';
 
 const AllowedSigningAlgs = ['RS256', 'RS384', 'RS512', 'PS256', 'PS384', 'PS512', 'ES256', 'ES384', 'ES512'];
 
-export class JoseUtil {
+export default class JoseUtil {
 
     static parseJwt(jwt) {
         Log.debug("JoseUtil.parseJwt");

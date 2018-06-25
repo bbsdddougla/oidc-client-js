@@ -1,12 +1,12 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { Timer } from './Timer';
+import Log from './Log';
+import Timer from './Timer';
 
 const DefaultAccessTokenExpiringNotificationTime = 60; // seconds
 
-export class AccessTokenEvents {
+export default class AccessTokenEvents {
 
     constructor({
         accessTokenExpiringNotificationTime = DefaultAccessTokenExpiringNotificationTime,

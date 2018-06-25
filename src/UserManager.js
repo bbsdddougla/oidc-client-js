@@ -1,16 +1,16 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { OidcClient } from './OidcClient';
-import { UserManagerSettings } from './UserManagerSettings';
-import { User } from './User';
-import { UserManagerEvents } from './UserManagerEvents';
-import { SilentRenewService } from './SilentRenewService';
-import { SessionMonitor } from './SessionMonitor';
-import { TokenRevocationClient } from './TokenRevocationClient';
+import Log from './Log';
+import OidcClient from './OidcClient';
+import UserManagerSettings from './UserManagerSettings';
+import User from './User';
+import UserManagerEvents from './UserManagerEvents';
+import SilentRenewService from './SilentRenewService';
+import SessionMonitor from './SessionMonitor';
+import TokenRevocationClient from './TokenRevocationClient';
 
-export class UserManager extends OidcClient {
+export default class UserManager extends OidcClient {
     constructor(settings = {},
         SilentRenewServiceCtor = SilentRenewService,
         SessionMonitorCtor = SessionMonitor,

@@ -1,10 +1,10 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { Global } from './Global';
+import Log from './Log';
+import Global from './Global';
 
-export class WebStorageStateStore {
+export default class WebStorageStateStore {
     constructor({prefix = "oidc.", store = Global.localStorage} = {}) {
         this._store = store;
         this._prefix = prefix;

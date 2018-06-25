@@ -1,11 +1,11 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { ResponseValidator } from '../../src/ResponseValidator';
-import { Log } from '../../src/Log';
-import { JoseUtil } from '../../src/JoseUtil';
+import ResponseValidator from '../../src/ResponseValidator';
+import Log from '../../src/Log';
+import JoseUtil from '../../src/JoseUtil';
 
-import { StubMetadataService } from './StubMetadataService';
+import StubMetadataService from './StubMetadataService';
 
 import chai from 'chai';
 chai.should();

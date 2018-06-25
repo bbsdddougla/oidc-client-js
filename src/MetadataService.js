@@ -1,12 +1,12 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { JsonService } from './JsonService';
+import Log from './Log';
+import JsonService from './JsonService';
 
 const OidcMetadataUrlPath = '.well-known/openid-configuration';
 
-export class MetadataService {
+export default class MetadataService {
     constructor(settings, JsonServiceCtor = JsonService) {
         if (!settings) {
             Log.error("MetadataService: No settings passed to MetadataService");

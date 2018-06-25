@@ -1,15 +1,15 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { MetadataService } from './MetadataService';
-import { UserInfoService } from './UserInfoService';
-import { ErrorResponse } from './ErrorResponse';
-import { JoseUtil } from './JoseUtil';
+import Log from './Log';
+import MetadataService from './MetadataService';
+import UserInfoService from './UserInfoService';
+import ErrorResponse from './ErrorResponse';
+import JoseUtil from './JoseUtil';
 
 const ProtocolClaims = ["nonce", "at_hash", "iat", "nbf", "exp", "aud", "iss", "c_hash"];
 
-export class ResponseValidator {
+export default class ResponseValidator {
 
     constructor(settings, MetadataServiceCtor = MetadataService, UserInfoServiceCtor = UserInfoService, joseUtil = JoseUtil) {
         if (!settings) {

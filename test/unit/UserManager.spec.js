@@ -1,17 +1,17 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { UserManager } from '../../src/UserManager';
-import { Log } from '../../src/Log';
-import { Global } from '../../src/Global';
-import { UserManagerSettings } from '../../src/UserManagerSettings';
-import { User } from '../../src/User';
+import UserManager from '../../src/UserManager';
+import Log from '../../src/Log';
+import Global from '../../src/Global';
+import UserManagerSettings from '../../src/UserManagerSettings';
+import User from '../../src/User';
 
-import { StubMetadataService } from './StubMetadataService';
-import { StubSilentRenewService } from './StubSilentRenewService';
-import { StubStateStore } from './StubStateStore';
-import { StubResponseValidator } from './StubResponseValidator';
-import { StubTokenRevocationClient } from './StubTokenRevocationClient';
+import StubMetadataService from './StubMetadataService';
+import StubSilentRenewService from './StubSilentRenewService';
+import StubStateStore from './StubStateStore';
+import StubResponseValidator from './StubResponseValidator';
+import StubTokenRevocationClient from './StubTokenRevocationClient';
 
 import chai from 'chai';
 chai.should();

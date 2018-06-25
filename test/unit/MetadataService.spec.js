@@ -1,13 +1,13 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from '../../src/Log';
-import { MetadataService } from '../../src/MetadataService';
+import Log from '../../src/Log';
+import MetadataService from '../../src/MetadataService';
 
-import { StubJsonService } from './StubJsonService';
+import StubJsonService from './StubJsonService';
 
 import chai from 'chai';
-import { Z_NO_COMPRESSION } from 'zlib';
+//import { Z_NO_COMPRESSION } from 'zlib';
 chai.should();
 let assert = chai.assert;
 

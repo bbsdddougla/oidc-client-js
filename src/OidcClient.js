@@ -1,17 +1,17 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-import { Log } from './Log';
-import { OidcClientSettings } from './OidcClientSettings';
-import { ErrorResponse } from './ErrorResponse';
-import { SigninRequest } from './SigninRequest';
-import { SigninResponse } from './SigninResponse';
-import { SignoutRequest } from './SignoutRequest';
-import { SignoutResponse } from './SignoutResponse';
-import { SigninState } from './SigninState';
-import { State } from './State';
+import Log from './Log';
+import OidcClientSettings from './OidcClientSettings';
+import ErrorResponse from './ErrorResponse';
+import SigninRequest from './SigninRequest';
+import SigninResponse from './SigninResponse';
+import SignoutRequest from './SignoutRequest';
+import SignoutResponse from './SignoutResponse';
+import SigninState from './SigninState';
+import State from './State';
 
-export class OidcClient {
+export default class OidcClient {
     constructor(settings = {}) {
         if (settings instanceof OidcClientSettings) {
             this._settings = settings;
