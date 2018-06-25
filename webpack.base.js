@@ -12,7 +12,7 @@ var createWebpackConfig = function(options) {
       loaders: [
         {
           test: /.js$/,
-          loaders: ['babel-loader'],
+          loaders: ['babel'],
           exclude: /node_modules/,
           include: __dirname
         }

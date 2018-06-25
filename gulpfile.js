@@ -4,12 +4,19 @@ var webpackStream = require('webpack-stream');
 var webpack = require('webpack');
 var createWebpackConfig = require('./webpack.base');
 
-var Uglify = require('uglifyjs-webpack-plugin');
-var uglifyPlugin = new Uglify();
-
 // entry points for both configs
 var npmEntry ='./index.js';
 var classicEntry = ['babel-polyfill', npmEntry];
+
+// uglify plugin for minification
+var uglifyPlugins =  [
+  new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false,
+          screw_ie8: true,
+      },
+  })
+];
 
 // npm compliant build with source-maps
 gulp.task('build-lib-sourcemap', ['jsrsasign'], function() {
@@ -35,8 +42,8 @@ gulp.task('build-lib-min', ['jsrsasign'], function() {
         filename:'oidc-client.min.js',
         libraryTarget:'umd',
     },
-    plugins: [uglifyPlugin],
-    devtool: false
+    plugins: uglifyPlugins,
+    devtool: null
   })))
   .pipe(gulp.dest('lib/'));
 });
@@ -67,8 +74,8 @@ gulp.task('build-dist-min', ['jsrsasign'], function() {
         libraryTarget:'var',
         library:'Oidc'
     },
-    plugins: [uglifyPlugin],
-    devtool: false
+    plugins: uglifyPlugins,
+    devtool: null
   })))
   .pipe(gulp.dest('dist/'));
 });
